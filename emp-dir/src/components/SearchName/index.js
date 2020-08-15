@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./searchName.css";
 import DataAreaContext from "../../utils/DataAreaContext";
 
-const searchName = ()=>{
+const SearchName = ()=>{
     const context = useContext(DataAreaContext);
     return (
         <div className="searchbox">
@@ -18,7 +18,7 @@ const searchName = ()=>{
                 </button>
             </form>
         </div>
-    )
+    );
 }
 
-export default searchName;
+export default SearchName;

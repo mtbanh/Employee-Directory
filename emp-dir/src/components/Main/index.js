@@ -1,5 +1,5 @@
 import React from "react";
-import DataArea  from "../DataArea/DataArea";
+import DataArea  from "../DataArea";
 import "./main.css";
 
 const Main =()=>{
@@ -7,7 +7,7 @@ const Main =()=>{
         <>
         <DataArea />
         </>
-    )
-}
+    );
+};
 
 export default Main;

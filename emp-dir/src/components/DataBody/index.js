@@ -13,22 +13,23 @@ const DataBody = () => {
         const day = dayArr[0];
         const formattedDate = [month, day, year].join("-");
         return formattedDate;
-    };
+    }
 
     return (
         <tbody>
-            {context.developerState.filteredUsers[0] !== undefined && context.developerState.filteredUsers[0].name !== undefined ?
-                (context.developerState.filteredUsers.map(({ login, firstname, lastname, image, phone, email, dob }) => {
+            {context.developerState.filteredUsers[0] !== undefined 
+            && context.developerState.filteredUsers[0].name !== undefined 
+            ? (context.developerState.filteredUsers.map(({ login, name, picture, phone, email, dob }) => {
                     return (
                         <tr key={login.uuid}>
                             <td data-th="Image" className="align-middle">
-                                <img src={image}
+                                <img src={picture.medium}
                                     alt={"profile image for" + name.first + " " + name.last}
                                     className="img-responsive" />
                             </td>
 
                             <td data-th="Name" className="name-cell align-middle">
-                                {firstname} {lastname}
+                                {name.first} {name.last}
                             </td>
 
                             <td data-th="Phone" className="align-middle">
@@ -36,7 +37,7 @@ const DataBody = () => {
                             </td>
 
                             <td data-th="Email" className=" align-middle">
-                                <a href={"mailto:" + email} target="_blank">
+                                <a href={"mailto:" + email} target="_blank" rel="noopener noreferrer">
                                     {email}
                                 </a>
                             </td>

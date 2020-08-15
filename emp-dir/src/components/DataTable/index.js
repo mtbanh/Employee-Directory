@@ -18,11 +18,12 @@ const DataTable = ()=>{
                                 className="col"
                                 key={name}
                                 style={{width}}
-                                onClick={()=>{context.handleSort(name.toLowerCase())}}
+                                onClick={()=>{context.handleSort(name)}}
                                 >
-                                    {name}<span className="pointer"></span>
+                                    {name}
+                                    <span className="pointer"></span>
                                 </th>
-                            )
+                            );
                         })}
                     </tr>
                 </thead>
